@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 25
+/svn/!svn/ver/8/trunk/src
+END
+lol_core.php
+K 25
+svn:wc:ra_dav:version-url
+V 38
+/svn/!svn/ver/8/trunk/src/lol_core.php
+END
+SQL.php
+K 25
+svn:wc:ra_dav:version-url
+V 33
+/svn/!svn/ver/3/trunk/src/SQL.php
+END
+STDIO.php
+K 25
+svn:wc:ra_dav:version-url
+V 35
+/svn/!svn/ver/3/trunk/src/STDIO.php
+END
+exec.php
+K 25
+svn:wc:ra_dav:version-url
+V 34
+/svn/!svn/ver/7/trunk/src/exec.php
+END

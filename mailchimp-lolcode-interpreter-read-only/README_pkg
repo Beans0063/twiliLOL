@@ -1,0 +1,72 @@
+MailChimp LOLCode Interpreter
+---------------------------------------
+Version: 0.3
+
+The MailChimp LOLCode interpreter allows you to write and run lolcode scripts. It mostly conforms to the lolcode 1.0 spec and picks up pieces of the more recent 1.1, 1.2, and 1.3 specs/proprosals where we needed something they defined. After that, we just made things up. Also, when we didn't like something or found something more lulzy, we just did whatever we pleased. 
+
+Some highlights of what the interpreter supports: 
+BUKKIT - multi-dimensional arrays and associative arrays/hashses 
+GIMMEH - io - file i/o, read from STDIN, network IO via http 
+MOARAGINS - eval() lolcode 
+POOPONIT! - analogous to PHP's var_dump() for variable inspection 
+
+This code was developed using Tetraboy's parser and we have, in fact, left some of that code intact in this release. Tetraboy's original site and code is here: 
+http://www.tetraboy.com/lolcode/
+
+LOL
+---------------------------------------
+LOL is our very own acronym for a standardized data format that can be consumed by a lolcode script. It stands for LOL Objekt Langwedge. You can think of it like JSON, but in a more lulzy fashion. 
+
+Also, really, it's just the bukkit grammar, but how could we pass up a recursive acronym, yaknow? 
+
+So far the only compatible web service that we've found to implement a version of LOL compatible with this implementation is, well, our very own web API :)
+Check it out here:
+    http://www.mailchimp.com/api/
+    
+A sample data of the data can be found here (test4.lol connects to this as well)
+    http://www.mailchimp.com/api/downloads/lol
+    
+Flickr and Pownce both implement similar versions of LOL, but they are not compatible. Since they were not the same and neither actually followed the LOLCode specs very closely, we did not build ours to match or support them. Maybe they'll join the fun now?
+
+
+Examples
+---------------------------------------
+We've packaged up some example scripts in the ./examples/ directory. Here's what they do:
+test.lol - This is from Tetraboy's original index.lol example. It opens a SQLite db and prints data from it 
+test2.lol - This example shows creating an associative array and printing its values. 
+test3.lol - This example shows reading in LOL format, eval'ing it, and then iterating over and printing the 'imported' variables. 
+test4.lol - This example shows off using the IO package to download a LOL formatted data file over the intertubes, evals it, and works with the data in the local scope 
+test5.lol - This example shows off using the IO package to prompt for input to save in a variable, then spits it back out. 
+test6.lol - This is from Tetraboy's original index.lol example. It shows defining a function, variable assignments, and incrememting numbers
+
+
+You can run them using something like:
+
+    # ./lol examples/test.lol
+
+
+License
+---------------------------------------
+Copyright (c) 2008 MailChimp, released under the MIT license
+
+Permission is hereby granted, free of charge, to any person
+obtaining a copy of this software and associated documentation
+files (the "Software"), to deal in the Software without
+restriction, including without limitation the rights to use,
+copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the
+Software is furnished to do so, subject to the following
+conditions:
+
+The above copyright notice and this permission notice shall be
+included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+OTHER DEALINGS IN THE SOFTWARE.
+--------------------------------------------------------------------------------------------------------------
